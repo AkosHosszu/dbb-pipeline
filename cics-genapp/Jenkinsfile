@@ -60,8 +60,7 @@ pipeline {
 
     // to set environment variables flag
     environment {
-        RUN_IDZ_CODE_REVIEW=false
-//        RUN_IDZ_CODE_REVIEW=true
+        RUN_IDZ_CODE_REVIEW=true
         JAVA_HOME='/usr/lpp/java/J11.0_64'
         IBM_JAVA_ENABLE_ASCII_FILETAG='ON'
         DBB_HOME='/var/dbb2012'
@@ -178,9 +177,7 @@ pipeline {
                             dbbZunitCccOpts="-cc -cch ${env.CCC_HOST} -ccp ${env.CCC_PORT}"
                             cccFolder = env.CCC_FOLDER
                         }
-                        println "env.RUN_IDZ_CODE_REVIEW = " + env.RUN_IDZ_CODE_REVIEW
                         idzCodeReviewFlag = env.RUN_IDZ_CODE_REVIEW && env.RUN_IDZ_CODE_REVIEW == 'true' ? true : false
-                        println "idzCodeReviewFlag = " + idzCodeReviewFlag
                         dbbHome = env.DBB_HOME
                         dbbUrl = env.DBB_URL
                         dbbHlq = env.DBB_HLQ
