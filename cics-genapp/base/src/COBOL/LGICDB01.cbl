@@ -19,6 +19,7 @@
       *                                                                *
       *                                                                *
       *   ray lam 03/08 verify
+      *   Akos Hosszu verify
       ***************20***************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LGICDB01.
